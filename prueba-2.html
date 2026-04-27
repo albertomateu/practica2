@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurante Noir</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #111;
+            color: #f5f5f5;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, 'sans-serif';
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #181818;
+            padding: 40px 0 30px 0;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            color: #bdbdbd;
+        }
+        nav {
+            background: #131313;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            margin: 0 30px;
+        }
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-size: 1.05em;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #e2b007;
+        }
+        .hero {
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-overlay {
+            background: rgba(17, 17, 17, 0.78);
+            padding: 40px 90px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .hero h2 {
+            color: #fff;
+            font-size: 2.2em;
+            font-weight: 500;
+            margin-bottom: 14px;
+            text-shadow: 0 3px 16px #000a;
+        }
+        .hero p {
+            color: #e2b007;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+        .section {
+            max-width: 1100px;
+            margin: 50px auto 0 auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            font-size: 2em;
+            color: #e2b007;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #232323;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+        .menu-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 28px;
+            margin-top: 25px;
+        }
+        .menu-card {
+            background: #191919;
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: 0 3px 18px #0003;
+            transition: transform 0.2s;
+        }
+        .menu-card:hover {
+            transform: translateY(-7px) scale(1.025);
+        }
+        .menu-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+        }
+        .menu-card-body {
+            padding: 17px 15px 12px 15px;
+        }
+        .menu-card-title {
+            font-size: 1.17em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .menu-card-desc {
+            color: #bdbdbd;
+            margin: 5px 0 10px 0;
+            font-size: 0.98em;
+        }
+        .menu-card-price {
+            color: #e2b007;
+            font-weight: bold;
+            font-size: 1.01em;
+        }
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 38px;
+            margin-top: 32px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .about img {
+            flex: 1 1 360px;
+            max-width: 410px;
+            border-radius: 13px;
+            box-shadow: 0 4px 22px #0006;
+        }
+        .about-content {
+            flex: 2 1 320px;
+            color: #e0e0e0;
+        }
+        .about-content h3 {
+            color: #e2b007;
+            margin-top: 0;
+            font-size: 1.27em;
+            font-weight: 600;
+        }
+        footer {
+            background: #171717;
+            color: #bdbdbd;
+            text-align: center;
+            padding: 26px 0 18px 0;
+            margin-top: 50px;
+            font-size: 0.98em;
+            border-top: 1px solid #222;
+        }
+
+        @media (max-width: 830px) {
+            .about {
+                flex-direction: column-reverse;
+                gap: 25px;
+            }
+            .about img {
+                max-width: 100%;
+                width: 100%;
+            }
+            .hero-overlay {
+                padding: 35px 10vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Restaurante Noir</h1>
+        <p>Gastronomía sofisticada en un ambiente elegante y discreto</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#nosotros">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <section class="hero" id="inicio">
+        <div class="hero-overlay">
+            <h2>Un viaje culinario sofisticado en el corazón de la ciudad</h2>
+            <p>Experiencia gourmet, atención exclusiva, y un ambiente de distinción.</p>
+        </div>
+    </section>
+
+    <div class="section" id="menu">
+        <h2 class="section-title">Nuestro Menú</h2>
+        <div class="menu-gallery">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=600&q=80" alt="Carpaccio de res">
+                <div class="menu-card-body">
+                    <div class="menu-card-title">Carpaccio de res</div>
+                    <div class="menu-card-desc">Finas lonchas de solomillo, aliñadas con aceite de oliva y parmesano.</div>
+                    <div class="menu-card-price">€16</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=600&q=80" alt="Risotto de setas">
+                <div class="menu-card-body">
+                    <div class="menu-card-title">Risotto de setas</div>
+                    <div class="menu-card-desc">Arroz cremoso con selección de setas silvestres y toque de trufa negra.</div>
+                    <div class="menu-card-price">€19</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=600&q=80" alt="Salmón a la plancha">
+                <div class="menu-card-body">
+                    <div class="menu-card-title">Salmón a la plancha</div>
+                    <div class="menu-card-desc">Salmón noruego premium con salsa de eneldo y limón.</div>
+                    <div class="menu-card-price">€22</div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1516685018646-5499d0a7d130?auto=format&fit=crop&w=600&q=80" alt="Tarta de chocolate amargo">
+                <div class="menu-card-body">
+                    <div class="menu-card-title">Tarta de chocolate amargo</div>
+                    <div class="menu-card-desc">Cremosa tarta con chocolate belga, acompañada de frutos rojos.</div>
+                    <div class="menu-card-price">€9</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="nosotros">
+        <h2 class="section-title">Sobre Nosotros</h2>
+        <div class="about">
+            <div class="about-content">
+                <h3>Filosofía Noir</h3>
+                <p>
+                    Restaurante Noir es un símbolo de elegancia y excelencia gastronómica. Nuestro equipo de chefs galardonados fusiona técnicas clásicas con creatividad contemporánea, seleccionando los ingredientes más refinados y frescos.<br><br>
+                    Cada detalle ha sido cuidadosamente diseñado para ofrecer una experiencia culinaria inolvidable en un ambiente íntimo y sofisticado.<br><br>
+                    Te invitamos a vivir la alta cocina con nosotros.
+                </p>
+            </div>
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&fit=crop&w=800&q=80" alt="Comedor elegante del restaurante">
+        </div>
+    </div>
+
+    <div class="section" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <p>Reservas y consultas: <b style="color:#e2b007;">+34 912 345 678</b> | <a href="mailto:reservas@noirrestaurante.es" style="color:#e2b007;text-decoration:none;">reservas@noirrestaurante.es</a></p>
+        <p>Dirección: Calle Elegancia 13, 28010 Madrid</p>
+    </div>
+
+    <footer>
+        &copy; 2024 Restaurante Noir. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
